@@ -123,7 +123,7 @@ class DatePickerIOS extends React.Component<Props> {
 
   componentDidUpdate() {
     if (this.props.date) {
-      const propsTimeStamp = this.props.date.getTime();
+      const propsTimeStamp = this.props.date;
       if (this._picker) {
         this._picker.setNativeProps({
           date: propsTimeStamp,
@@ -154,7 +154,7 @@ class DatePickerIOS extends React.Component<Props> {
           style={styles.datePickerIOS}
           date={
             props.date
-              ? props.date.getTime()
+              ? props.date
               : props.initialDate
                 ? props.initialDate.getTime()
                 : undefined
